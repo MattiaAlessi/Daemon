@@ -1,0 +1,20 @@
+from daemon.terminal.cursor import Cursor
+import time
+
+cursor = Cursor()
+print("Hello")
+time.sleep(1)
+cursor.move(5, 10)
+print("Sono qui!")
+time.sleep(1)
+cursor.move_up(2)
+print("Su!")
+time.sleep(1)
+cursor.move_down(4)
+print("Giu!")
+time.sleep(1)
+cursor.move_left(3)
+print("Sinistra!")
+time.sleep(1)
+cursor.move_right(6)
+print("Destra!")
