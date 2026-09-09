@@ -1,12 +1,9 @@
-from daemon.terminal.input import Input
-from daemon.terminal.keys import Key
+from daemon.terminal.keyboard import Keyboard
 
 
 
 while True:
-    key = Input.read()
-    print(repr(key))
+    keyboard = Keyboard()
+    key = keyboard.read()
+    print(key)
 
-    if key == Key.ESC:
-        print("Bye")
-        break
