@@ -1,4 +1,4 @@
-from daemon.terminal.input import Input
+from daemon.input.input import Input
 
 class Keyboard:
     def __init__(self):

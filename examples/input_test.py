@@ -1,4 +1,4 @@
-from daemon.terminal.keyboard import Keyboard
+from daemon.input.keyboard import Keyboard
 
 
 
