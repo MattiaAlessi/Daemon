@@ -1,8 +1,14 @@
-from daemon.input.input import Input
+import os
 
 class Keyboard:
     def __init__(self):
-        self.input = Input()
+        if os.name == 'nt': 
+            from .input import Input
+            self.input = Input()
+        else:
+            from .unix import UnixInput
+            self.input = UnixInput()
 
     def read(self):
-        return self.input.read()
+        return self.input.read() 
+    
