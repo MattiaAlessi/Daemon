@@ -37,6 +37,8 @@ class Input:
         "\x08": Key.BACKSPACE,
         "\x1b": Key.ESC,
         " ": Key.SPACE,
+        "\x03":Key.CTRL_C,
+        "\x04": Key.CTRL_D
     }
  
 

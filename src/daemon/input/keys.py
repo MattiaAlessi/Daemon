@@ -26,3 +26,5 @@ class Key:
     F10 = "f10"
     F11 = "f11"
     F12 = "f12"
+    CTRL_C = "ctrl_c"
+    CTRL_D = "ctrl_d"
