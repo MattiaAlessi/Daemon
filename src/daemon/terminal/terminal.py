@@ -13,12 +13,7 @@ class Terminal:
         print(text, end="\n" if newline else "", flush=flush)
     
     def clear_window(self):
-        """This class use the ANSI code sequence Esc[2J Esc[H to clear the entire screen"""
-        #Esc[2J clear and cursor to home position
-        #Esc[H send cursor to cursor home position
-        #Esc = x1b in byte
-        sys.stdout.write('\x1b[2J\x1b[H') 
-        sys.stdout.flush()
+        os.system("cls" if os.name == "nt" else "clear")
         
     def clear_current_line(self):
         """This class use the ANSI code sequence Esc[2K \\r to clear the curent screen"""
@@ -47,3 +42,16 @@ class Terminal:
     sys.stdout.flush()
     time.sleep(0.5)
     sys.stdout.write('\r')     # return to start for next update"""
+    
+    
+    
+if __name__ == "__main__":
+    t = Terminal()
+
+    t.write("CIAO", newline=True)
+
+    input("Premi INVIO...")
+
+    t.clear_window()
+
+    t.write("SCHERMATA PULITA", newline=True)
